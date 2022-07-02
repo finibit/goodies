@@ -1,0 +1,15 @@
+{
+  "name": "utilities",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "ava",
+    "lint": "standard --fix"
+  },
+  "devDependencies": {
+    "ava": "^4.3.0",
+    "lerna": "^5.1.0",
+    "sinon": "^14.0.0",
+    "standard": "^17.0.0"
+  }
+}
