@@ -1,0 +1,43 @@
+{
+  "name": "@finibit/props",
+  "version": "0.0.0",
+  "description": "Access nested object properties using paths",
+  "keywords": [
+    "object",
+    "path",
+    "dot",
+    "prop",
+    "property",
+    "notation",
+    "access",
+    "deep",
+    "nested"
+  ],
+  "author": "Finibit <team@finibit.com>",
+  "license": "MIT",
+  "main": "lib/props.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finibit/utilities.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/finibit/utilities/issues"
+  },
+  "homepage": "https://github.com/finibit/utilities#readme"
+}
