@@ -1,0 +1,39 @@
+{
+  "name": "@finibit/iterate",
+  "version": "0.0.0",
+  "description": "Iterate over objects, strings and collections",
+  "keywords": [
+    "for",
+    "each"
+  ],
+  "author": "Finibit <team@finibit.com>",
+  "license": "MIT",
+  "main": "lib/iterate.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finibit/utilities.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/finibit/utilities/issues"
+  },
+  "homepage": "https://github.com/finibit/utilities#readme",
+  "dependencies": {
+    "@finibit/types": "^0.0.0"
+  }
+}
