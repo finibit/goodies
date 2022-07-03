@@ -25,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finibit/utilities.git"
+    "url": "git+https://github.com/finibit/goodies.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/finibit/utilities/issues"
+    "url": "https://github.com/finibit/goodies/issues"
   },
-  "homepage": "https://github.com/finibit/utilitiess#readme"
+  "homepage": "https://github.com/finibit/goodies#readme"
 }
