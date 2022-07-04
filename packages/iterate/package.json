@@ -1,6 +1,6 @@
 {
   "name": "@finibit/iterate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Iterate over objects, strings and collections",
   "keywords": [
     "for",
@@ -34,6 +34,6 @@
   },
   "homepage": "https://github.com/finibit/goodies#readme",
   "dependencies": {
-    "@finibit/types": "^0.0.0"
+    "@finibit/types": "^0.1.0"
   }
 }
