@@ -23,6 +23,27 @@ test('ensureUndefined() returns value or throws error depending on the argument 
   t.throws(() => ensure.ensureUndefined(values.promiseValue), { instanceOf: TypeError })
 })
 
+test('ensureDefined() returns value or throws error depending on the argument type', (t) => {
+  t.throws(() => ensure.ensureDefined(values.undefinedValue), { instanceOf: TypeError })
+  t.is(ensure.ensureDefined(values.nullValue), values.nullValue)
+  t.is(ensure.ensureDefined(values.booleanValue), values.booleanValue)
+  t.is(ensure.ensureDefined(values.integerValue), values.integerValue)
+  t.is(ensure.ensureDefined(values.numberValue), values.numberValue)
+  t.is(ensure.ensureDefined(values.NaNValue), values.NaNValue)
+  t.is(ensure.ensureDefined(values.plusInfinityValue), values.plusInfinityValue)
+  t.is(ensure.ensureDefined(values.minusInfinityValue), values.minusInfinityValue)
+  t.is(ensure.ensureDefined(values.stringValue), values.stringValue)
+  t.is(ensure.ensureDefined(values.arrayValue), values.arrayValue)
+  t.is(ensure.ensureDefined(values.typedArrayValue), values.typedArrayValue)
+  t.is(ensure.ensureDefined(values.mapValue), values.mapValue)
+  t.is(ensure.ensureDefined(values.setValue), values.setValue)
+  t.is(ensure.ensureDefined(values.objectValue), values.objectValue)
+  t.is(ensure.ensureDefined(values.classValue), values.classValue)
+  t.is(ensure.ensureDefined(values.functionValue), values.functionValue)
+  t.is(ensure.ensureDefined(values.symbolValue), values.symbolValue)
+  t.is(ensure.ensureDefined(values.promiseValue), values.promiseValue)
+})
+
 test('ensureNull() returns value or throws error depending on the argument type', (t) => {
   t.throws(() => ensure.ensureNull(values.undefinedValue), { instanceOf: TypeError })
   t.is(ensure.ensureNull(values.nullValue), values.nullValue)

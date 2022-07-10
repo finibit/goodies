@@ -23,6 +23,27 @@ test('isUndefined() returns true or false depending on the argument type', (t) =
   t.false(is.isUndefined(values.promiseValue))
 })
 
+test('isDefined() returns true or false depending on the argument type', (t) => {
+  t.false(is.isDefined(values.undefinedValue))
+  t.true(is.isDefined(values.nullValue))
+  t.true(is.isDefined(values.booleanValue))
+  t.true(is.isDefined(values.integerValue))
+  t.true(is.isDefined(values.numberValue))
+  t.true(is.isDefined(values.NaNValue))
+  t.true(is.isDefined(values.plusInfinityValue))
+  t.true(is.isDefined(values.minusInfinityValue))
+  t.true(is.isDefined(values.stringValue))
+  t.true(is.isDefined(values.arrayValue))
+  t.true(is.isDefined(values.typedArrayValue))
+  t.true(is.isDefined(values.mapValue))
+  t.true(is.isDefined(values.setValue))
+  t.true(is.isDefined(values.objectValue))
+  t.true(is.isDefined(values.classValue))
+  t.true(is.isDefined(values.functionValue))
+  t.true(is.isDefined(values.symbolValue))
+  t.true(is.isDefined(values.promiseValue))
+})
+
 test('isNull() returns true or false depending on the argument type', (t) => {
   t.false(is.isNull(values.undefinedValue))
   t.true(is.isNull(values.nullValue))

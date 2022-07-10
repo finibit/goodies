@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-07-10
+### Added
+
+- Added `isDefined` and `ensureDefined` functions 
+
 ## [0.1.0] - 2022-07-04
 ### Added
 

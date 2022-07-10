@@ -2,12 +2,16 @@ import * as labels from './detail/labels.js'
 
 /* eslint-disable valid-typeof */
 
-export function isNull (v) {
-  return v === null
-}
-
 export function isUndefined (v) {
   return v === undefined
+}
+
+export function isDefined (v) {
+  return v !== undefined
+}
+
+export function isNull (v) {
+  return v === null
 }
 
 export function isBoolean (v) {

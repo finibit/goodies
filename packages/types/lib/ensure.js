@@ -14,6 +14,10 @@ export function ensureUndefined (v) {
   return ensureType(v, is.isUndefined, labels.undefinedType)
 }
 
+export function ensureDefined (v) {
+  return ensureType(v, is.isDefined, labels.definedType)
+}
+
 export function ensureNull (v) {
   return ensureType(v, is.isNull, labels.nullType)
 }

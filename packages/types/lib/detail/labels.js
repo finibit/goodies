@@ -1,5 +1,6 @@
-export const nullType = 'null'
 export const undefinedType = 'undefined'
+export const definedType = 'defined'
+export const nullType = 'null'
 export const booleanType = 'boolean'
 export const integerType = 'integer'
 export const numberType = 'number'
