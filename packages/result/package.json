@@ -1,6 +1,6 @@
 {
   "name": "@finibit/result",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Handle function call results using a common type",
   "keywords": [
     "result",
@@ -39,6 +39,6 @@
   },
   "homepage": "https://github.com/finibit/goodies#readme",
   "dependencies": {
-    "@finibit/types": "^0.1.0"
+    "@finibit/types": "^0.1.1"
   }
 }
