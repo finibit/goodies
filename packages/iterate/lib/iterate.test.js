@@ -95,9 +95,27 @@ test('iterate calls the given function for each key passing the object as third 
   t.deepEqual(objects, [object, object, object])
 })
 
+test('iterate calls the given function for each integer between 0 and 10', (t) => {
+  const integers = []
+  iterate(10, (value) => integers.push(value))
+  t.deepEqual(integers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+})
+
+test('iterate calls the given function for each integer between 0 and -10', (t) => {
+  const integers = []
+  iterate(-10, (value) => integers.push(value))
+  t.deepEqual(integers, [-0, -1, -2, -3, -4, -5, -6, -7, -8, -9])
+})
+
+test('iterate does not call the given function if 0 is passed', (t) => {
+  const integers = []
+  iterate(0, (value) => integers.push(value))
+  t.deepEqual(integers, [])
+})
+
 test('iterate throws if first argument cannot be iterated over', (t) => {
   t.throws(() => iterate(null, () => {}), { instanceOf: TypeError })
-  t.throws(() => iterate(1, () => {}), { instanceOf: TypeError })
+  t.throws(() => iterate(1.1, () => {}), { instanceOf: TypeError })
 })
 
 test('iterateIterable throws if first argument is not iterable', (t) => {

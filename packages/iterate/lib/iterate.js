@@ -1,4 +1,13 @@
-import { typeOf, isIterable, isObject, ensureFunction, ensureIterable, ensureObject } from '@finibit/types'
+import {
+  typeOf,
+  isInteger,
+  isIterable,
+  isObject,
+  ensureFunction,
+  ensureIterable,
+  ensureObject,
+  ensureInteger
+} from '@finibit/types'
 
 /**
  * Calls `iteratee` for each entry of `map`.
@@ -53,6 +62,22 @@ export function iterateObject (object, iteratee) {
 }
 
 /**
+ * Calls `iteratee` for each integer in the range from `0` to `integer`.
+ * @param {Number} integer An integer value, which is the upper bound of the range.
+ * @param {Function} iteratee A function to call for each value in the range from `0` to `integer`.
+ * @throws TypeError Throws if `integer` is not an integer type, or `iteratee` is not a function.
+ */
+export function iterateInteger (integer, iteratee) {
+  integer = ensureInteger(integer)
+  iteratee = ensureFunction(iteratee)
+  const sign = integer < 0 ? -1 : 1
+
+  for (let i = 0; i < Math.abs(integer); ++i) {
+    iteratee(i * sign)
+  }
+}
+
+/**
  * Calls `iteratee` for each element of `value`.
  * @param {Array|String|Set|Map|Object} any An object to iterate over.
  * @param {Function} iteratee A function to call for each element.
@@ -66,6 +91,8 @@ export default function iterate (any, iteratee) {
     return iterateIterable(any, iteratee)
   } else if (isObject(any)) {
     return iterateObject(any, iteratee)
+  } else if (isInteger(any)) {
+    return iterateInteger(any, iteratee)
   }
 
   throw TypeError(`Expected iterable or object, got ${typeOf(any)}`)

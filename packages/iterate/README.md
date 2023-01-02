@@ -35,6 +35,9 @@ iterate('abc', (char, index, string) => {})
 
 // set
 iterate(new Set('a', 'b', 'c'), (value, index, set) => {})
+
+// integer
+iterate(10, (integer) => {})
 ```
 
 When iterating over objects, the function also receives three arguments. The first one is the value of the current
@@ -60,7 +63,7 @@ import { iterateIterable } from '@finibit/iterate'
 iterateIterable([1, 2, 3], (value, index, array) => {})
 ```
 
-For objects use `iterateObject`
+For objects use `iterateObject`:
 
 ```js
 import { iterateObject } from '@finibit/iterate'
@@ -68,10 +71,18 @@ import { iterateObject } from '@finibit/iterate'
 iterateObject({ a: 1, b: 2, c: 3 }, (value, key, object) => {})
 ```
 
-For the built-in `Map` use `iterateMap`
+For the built-in `Map` use `iterateMap`:
 
 ```js
 import { iterateMap } from '@finibit/iterate'
 
 iterateMap(new Map([[1, 'a'], [2, 'b'], [3, 'c']], (value, key, map) => {}))
+```
+
+You can iterate over negative integer values too:
+
+```js
+import { iterateInteger } from '@finibit/iterate'
+
+iterateInteger(-10, (integer) => {})
 ```
